@@ -83,8 +83,8 @@ def result():
     temp2=co2.json()['main']['temp']
     des1=co1.json()['weather'][0]['description']
     des2=co2.json()['weather'][0]['description']
-    api3="https://api.openweathermap.org/data/2.5/air_pollution?lat=" + lat1 + "&lon=" + lon1 + "&appid=" + key
-    api4="https://api.openweathermap.org/data/2.5/air_pollution?lat=" + lat2 + "&lon=" + lon2 + "&appid=" + key
+    api3="https://api.openweathermap.org/data/2.5/air_pollution?lat=" + str(lat1) + "&lon=" + str(lon1) + "&appid=" + key
+    api4="https://api.openweathermap.org/data/2.5/air_pollution?lat=" + str(lat2) + "&lon=" + str(lon2) + "&appid=" + key
     api3=requests.get(api3)
     api4=requests.get(api4)
     aqi1=api3.json()['list'][0]['main']['aqi']
